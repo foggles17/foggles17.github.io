@@ -1,0 +1,348 @@
+<html>
+	<head>
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+		crossorigin="anonymous">
+		</script>
+		<style>
+			body {
+				font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+				font-size: 14;
+				background-color: #F0F0F0;
+				padding: 0;
+				margin: 0;
+			}
+			ul {
+				padding-left: 20px;
+				margin: 8px;
+			}
+			iframe {
+				max-width: 100%;
+				padding: 10px;
+				border-radius: 4px;
+				background-color: #E0E0E0;
+			}
+			#title {
+				font-size: 48;
+				background-color: #448855;
+				color: #FFFFFF;
+				text-align: center;
+				padding: 20px;
+			}
+			#mainContent {
+				color: #444444;
+				background-color: #FFFFFF;
+				padding: 40px;
+				border-radius: 10px;
+				margin: 30px;
+			}
+			#footer {
+				background-color: #448855;
+				color: #FFFFFF;
+				text-align: center;
+				padding: 20px;
+			}
+			.categoryName {
+				font-weight: bold;
+				font-size: 24;
+				padding-bottom: 10px;
+			}
+			.categoryContents {
+				margin: 0 20px;
+				padding: 10px;
+				border: 2px solid #F0F0F0;
+				border-radius: 4px;
+			}
+			.project {
+				display: block;
+			}
+			.projectLabel {
+				font-size: 20;
+			}
+			.projectName {
+				font-weight: bold;
+				font-style: italic;
+			}
+			.footnote {
+				font-size: 14;
+				padding: 0 20px;
+			}
+			.projectContents {
+				font-size: 18;
+				line-height: 24px;
+				padding: 10px 20px 0px;
+			}
+			.media {
+				align-self: center;
+				margin: 10px;
+				padding-left: 40px;
+				padding-right: 40px;
+				font-size: 16px;
+				font-weight: bold;
+			}
+			.show {
+				display: inline-block;
+				cursor: pointer;
+			}
+			.demo {
+				margin: 10px 0;
+			}
+			.thumbnail {
+				float: right;
+				display: block;
+			}
+			#mainContent .project:not(:last-child) {
+				margin-bottom: 20px;
+			}
+			#mainContent .projectCategory:not(:last-child) {
+				margin-bottom: 20px;
+			}
+		</style>
+		<title class="titleHolder"></title>
+	</head>
+	<body>
+		<div class="titleHolder" id="title"></div>
+		<div id="mainContent">
+			<div class="projectCategory">
+				<div class="categoryName show" for="gameDev">Game Development Projects</div>
+				<div class="categoryContents" id="gameDev">
+					<div class="project">
+						<div class="projectLabel show" for="matchris">
+							<span class="projectName">matchris</span>
+							- Arcade Puzzle Game, Godot, July 2022
+						</div>
+						<div class="projectContents" id="matchris">My first post-tutorial project in Godot. The goal here was to make a complete game with everything I'd expect to see in one - gameplay, menus, settings, accessibility, save data, etc. Gameplay involves matching patterned tiles to get specific types of combos and high scores.
+							<div class="media">
+								<a href="https://foggles.itch.io/matchris" target="_blank">Play/Download It Here</a>
+								&emsp;
+							</div>
+						</div>
+					</div>
+					<div class="project">
+						<div class="projectLabel show" for="stealth">
+							<span class="projectName">Beyond a Shadow of a Crouch</span>
+							- Stealth Game Prototype, GameMaker Studio 2, May 2021
+						</div>
+						<div class="projectContents" id="stealth">This was a 4-day solo project where I tried to replicate some parts I liked about stealth games and add moderately competent enemy behavior, namely that they will not approach a noise without first calling for backup. All code and assets are original.
+							<div class="media">
+								<div for="stealthDemo" class="show">Demonstration Video</div>
+								<div id="stealthDemo" class="demo">
+									<iframe id="stealthVid" class="vid" width="800" height="450" src="https://www.youtube.com/embed/v4fWdJmZ0Ow?enablejsapi=1" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="projectCategory">
+				<div class="categoryName show" for="marioMaker">Super Mario Maker Levels</div>
+				<div class="categoryContents" id="marioMaker">
+					<div class="project">
+						<div class="projectLabel show" for="trollNote">What is a Troll Level?</div>
+						<div class="projectContents" id="trollNote">
+							In Super Mario Maker, a "troll level" is a level that tries to predict what the player will do and punishes them for it.
+							A <i>good</i> one does that in an entertaining manner while still being easy to progress through once the player has been "trolled".
+							This makes the playtesting and revision process a crucial step, both to make sure a level's predictions actually match what players do and to refine the cues the level gives the player so they don't get lost.
+							This type of level is something of a happy accident resulting from the simplistic complexity of the Mario Maker games, and I've been a part of the community surrounding them since mid-2018.
+						</div>
+					</div>
+					<div class="project">
+						<div class="projectLabel show" for="thwomp">
+							<span class="projectName">What Are You Doing in My Thwomp?</span>
+							- Troll Level, Super Mario Maker, October 2021
+						</div>
+						<div class="projectContents" id="thwomp">
+							A solo SMM2 troll level, mostly to prove to myself that I could still make one. Some of the best moments in this level (namely the bomb in room 2 and the spring in room 4) hinge on giving the player plenty of information but still knowing they'll do the wrong thing.
+							<div class="media">
+								SMM2 Level Code: B5N-KNY-M2G
+								&emsp;
+								<div for="thwompExplain" class="show">Creator's Commentary</div>
+								&emsp;
+								<div id="thwompExplain" class="demo">
+									<iframe id="thwompVid1" class="vid" width="800" height="450" src="https://www.youtube-nocookie.com/embed/wd7fJZ0dEgM?enablejsapi=1" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+								</div>
+								<div for="thwompDemo1" class="show">Playthrough 1</div>
+								&emsp;
+								<div id="thwompDemo1" class="demo">
+									<iframe id="thwompVid2" class="vid" width="800" height="450" src="https://www.youtube-nocookie.com/embed/U0WHdYUoXyI?enablejsapi=1" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+								</div>
+								<div for="thwompDemo2" class="show">Playthrough 2</div>
+								&emsp;
+								<div id="thwompDemo2" class="demo">
+									<iframe id="thwompVid3" class="vid" width="800" height="450" src="https://www.youtube-nocookie.com/embed/re80hsaoXd8?enablejsapi=1" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+								</div>
+								<div for="thwompDemo3" class="show">Playthrough 3</div>
+								&emsp;
+								<div id="thwompDemo3" class="demo">
+									<iframe id="thwompVid4" class="vid" width="800" height="450" src="https://www.youtube-nocookie.com/embed/xexgoANnukc?enablejsapi=1" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+								</div>
+								<div for="thwompDemo4" class="show">Playthrough 4</div>
+								&emsp;
+								<div id="thwompDemo4" class="demo">
+									<iframe id="thwompVid5" class="vid" width="800" height="450" src="https://www.youtube-nocookie.com/embed/E0KNb7atX_M?enablejsapi=1" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="project">
+						<div class="projectLabel show" for="cmc3d">
+							<span class="projectName">The CarlMoney Collab 3D</span>
+							- Troll Level Collab, Super Mario Maker 2, May 2020
+						</div>
+						<div class="projectContents" id="cmc3d">
+							This was a 17-person project that took place over the 2 months leading up to May 11th, 2020. My contributions to this project included:
+							<ul>
+								<li>creating a few modules to put into the level</li>
+								<li>putting a level together out of the modules that the other builders and I created</li>
+								<li>submitting the level to playtesters</li>
+								<li>revising the level based on the playtests</li>
+							</ul>
+							The last two points are most important, since they mean that I was in charge of most of the work after the initial modules were complete, which in this case means the second half of the project time-wise.
+							<div class="media">
+								<div for="cmc3dExplain" class="show">Creator's Commentary</div>
+								&emsp;
+								<div id="cmc3dExplain" class="demo">
+									<iframe id="cmc3dVid1" class="vid" width="800" height="450" src="https://www.youtube-nocookie.com/embed/5IIs3efp9Zg?enablejsapi=1" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+								</div>
+								<div for="cmc3dTrailer" class="show" title="I did not create this trailer.">Trailer</div>
+								&emsp;
+								<div id="cmc3dTrailer" class="demo">
+									<iframe id="cmc3dVid2" class="vid" width="800" height="450" src="https://www.youtube-nocookie.com/embed/F_NPJn1IoYM?enablejsapi=1" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+								</div>
+								<div for="cmc3dDemo1" class="show">Playthrough 1</div>
+								&emsp;
+								<div id="cmc3dDemo1" class="demo">
+									<iframe id="cmc3dVid3" class="vid" width="800" height="450" src="https://www.youtube-nocookie.com/embed/CYj6zob0FK0?enablejsapi=1" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+								</div>
+								<div for="cmc3dDemo2" class="show">Playthrough 2</div>
+								&emsp;
+								<div id="cmc3dDemo2" class="demo">
+									<iframe id="cmc3dVid4" class="vid" width="800" height="450" src="https://www.youtube-nocookie.com/embed/63kEuMkoaB4?enablejsapi=1" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="project">
+						<div class="projectLabel show" for="plumber">
+							<span class="projectName">There and Back and There Again</span>
+							- Challenge Level, Super Mario Maker 2, January 2020
+						</div>
+						<div class="projectContents" id="plumber">
+							The goal of this level was to sidestep the "no checkpoints" restriction on levels with clear conditions.
+							I accomplished this by adding pseudo-checkpoints through the use of powerups and powerup dispensers behind blocks that can only be broken in certain powerup states.
+							The part that makes the level interesting is that, although you're repeatedly going through the same area, the location of the most difficult part changes each time based on your powerup state - small Mario is tricky toward the end because the checkpoints don't work yet, Super Mario has some difficulty with the low-flying ghosts and has to slow down and duck, and Builder Mario has to be careful with the ghosts over pits since the "checkpoints" can't save you from the abyss.
+							<div class="media">
+								SMM2 Level Code: 8DY-DGV-F5G
+								&emsp;
+								<div for="plumberDemo" class="show">Demonstration Video</div>
+								&emsp;
+								<div id="plumberDemo" class="demo">
+									<iframe id="plumberVid" class="vid" width="800" height="450" src="https://www.youtube-nocookie.com/embed/Ki0-n0HEA2k?enablejsapi=1" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="project">
+						<div class="projectLabel show" for="skeltrol">
+							<span class="projectName">thank mr skeltrol</span>
+							- Troll Level, Super Mario Maker, June 2019
+						</div>
+						<div class="projectContents" id="skeltrol">
+							My second troll level. This was near the end of SMM1's lifespan (right before SMM2 came out) so the ending is a bit less complete than I would've liked, but I think it turned out pretty well. I brought in some of my skills in music levels and added some skeleton-themed songs. The moment just before collecting checkpoint 2 is a personal favorite.
+							<div class="media">
+								SMM1 Level Code: 8BC6-0000-03EB-0D38
+								&emsp;
+								<div for="skeltrolDemo" class="show">Playthrough</div>
+								&emsp;
+								<div id="skeltrolDemo" class="demo">
+									<iframe id="skeltrolVid" class="vid" width="800" height="450" src="https://www.youtube-nocookie.com/embed/PiRIx90s9z4?enablejsapi=1&start=2324" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="project">
+						<div class="projectLabel show" for="pinnacarl">
+							<span class="projectName">The Pinnacarl of Larl Design.</span>
+							- Troll Level, Super Mario Maker, February 2019
+						</div>
+						<div class="projectContents" id="pinnacarl">
+							This was my first successful troll level. The failed attempts before it taught me what I should be going for, and the playtesting I got on this one helped it swerve from disaster in the last few weeks before its final release. I'm particularly happy with the checkpoint 2 fakeout and the ending.
+							<div class="media">
+								SMM1 Level Code: 1920-0000-0415-0793
+								&emsp;
+								<div for="pinnacarlDemo1" class="show">Playthrough 1</div>
+								&emsp;
+								<div id="pinnacarlDemo1" class="demo">
+									<iframe id="pinnacarlVid1" class="vid" width="800" height="450" src="https://www.youtube-nocookie.com/embed/5B_tW0pYMLQ?enablejsapi=1&start=17&end=1624" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+								</div>
+								<div for="pinnacarlDemo2" class="show">Playthrough 2</div>
+								&emsp;
+								<div id="pinnacarlDemo2" class="demo">
+									<iframe id="pinnacarlVid2" class="vid" width="800" height="450" src="https://www.youtube-nocookie.com/embed/P6ZRV3BFGw0?enablejsapi=1" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="projectCategory">
+				<div class="categoryName show" for="programming">Other Programming Projects</div>
+				<div class="categoryContents" id="programming">
+					<div class="project">
+						<div class="projectLabel show" for="portfolio">
+							<span class="projectName"><span class="titleHolder"></span></span>
+							- Portfolio, HTML/CSS/JavaScript, July 2021
+						</div>
+						<div class="projectContents" id="portfolio">
+							This was a portfolio that I created so I could more easily show people the projects I've done.
+							<div class="media">
+								<div for="portfolioDemo" title="Adding this was a mistake." class="show">Demo</div>
+								&emsp;
+								<div id="portfolioDemo" class="demo">
+									<iframe width="100%" height="600" src="#"></iframe>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script>
+		$('.titleHolder').each(function() {
+			var title = "Tim Martin's Game Dev Portfolio";
+			$(this).text(title);
+		});
+		$('.show').each(function() {
+			var toShow = document.getElementById($(this).attr('for'));
+			if ($(toShow).hasClass('demo') || $(toShow).hasClass('projectContents'))
+			{
+				$(this).html($(this).html() + " +");
+				$(toShow).hide();
+			}
+			else
+			{
+				$(this).html($(this).html() + " -");
+				$(toShow).show();
+			}
+		});
+		$('.show').click(function() {
+			var reveal = $(this);
+			var demo = document.getElementById(reveal.attr('for'));
+			var showText = reveal.html();
+			if(showText.endsWith("+"))
+			{
+				$(this).html(showText.substring(0, showText.length-1) + '-');
+				$(demo).show(200);
+			}
+			else
+			{
+				$(this).html(showText.substring(0, showText.length-1) + '+');
+				$(demo).hide(200);
+				//$(demo).children(".vid").each(function(){
+				//	$(this).stopVideo();
+				//});
+			}
+		});
+	</script>
+</html>
