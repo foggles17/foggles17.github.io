@@ -1,5 +1,5 @@
 :root {
-	--outer_width: 90%;
+	--outer_width: 1200px;
 	--content_columns: 2;
 	--content_padding: 10px;
 }
@@ -10,8 +10,19 @@ body {
 	background-color: #F0F0F0;
 	padding: 0;
 	margin: 0;
-	min-width: 320px;
+	min-width: 330px;
 	border:#448855,20px,solid;
+}
+
+#content {
+	max-width: var(--outer_width);
+	margin: auto;
+}
+
+.bottomLine {
+	padding-bottom: 20px;
+	border-bottom: #777 solid 1px;
+	margin-bottom: 20px;
 }
 
 #title {
@@ -21,14 +32,16 @@ body {
 	text-align: center;
 	padding: 20px;
 }
-#aboutMe, #trollNote {
+.textBlock {
 	text-align: justify;
-	padding: 10px;
-	margin: auto;
-	margin-bottom: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0px 10px 20px 10px;
 	max-width: var(--outer_width);
 }
-
+ul {
+	margin: 0;
+}
 
 .categoryTitle {
 	font-size: 48px;
@@ -41,8 +54,9 @@ body {
 }
 .outer {
 	max-width: var(--outer_width);
-	margin: auto;
-	margin-bottom: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
 
 	display: flex;
 	flex-direction: row;
@@ -54,13 +68,13 @@ body {
 .box {
 	margin-left: auto;
 	margin-right: auto;
-
-	color: black;
-	background: #DDDDDD;
-	border-radius: 10px;
-	border: #555555 solid 3px;
 	padding: var(--content_padding);
 	max-width: 500px;
+
+	/* color: black;
+	background: #DDDDDD;
+	border-radius: 10px;
+	border: #555555 solid 3px; */
 	
 	display: flex;
 	flex-direction: row;
@@ -75,9 +89,19 @@ body {
 	font-weight: bold;
 	text-align: center;
 }
+.date {
+	font-weight: normal;
+	color: #777;
+}
+.projectType {
+	font-size: 14pt;
+	font-weight: bold;
+	text-align: center;
+	color: #777;
+}
 .thumbnail {
 	display: block;
-	max-width: 100%;
+	max-width: calc(100% - 20px);
 	max-height: 300px;
 	margin: auto;
 	padding: 10px;
@@ -85,6 +109,7 @@ body {
 	flex-shrink: 3;
 }
 .description {
-	margin: 20px;
+	font-size: 14pt;
+	margin: 10px;
 	text-align: justify;
 }
