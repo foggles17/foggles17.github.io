@@ -7,16 +7,31 @@
 body {
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	font-size: 14pt;
-	background-color: #F0F0F0;
+	/* background-color: #F0F0F0; */
+	background: linear-gradient(
+			90deg, 
+			#DDD calc(50% - 700px), 
+			#BBB calc(50% - 600px), 
+			#BBB calc(50% + 600px), 
+			#DDD calc(50% + 700px));
+	/* background-color: #333; */
 	padding: 0;
 	margin: 0;
 	min-width: 330px;
-	border:#448855,20px,solid;
 }
-
 #content {
+	/* background-color: #F0F0F0; */
+	background-color: #FFF;
 	max-width: var(--outer_width);
 	margin: auto;
+	padding-bottom: 20px;
+}
+footer {
+	font-size: 48px;
+	background-color: #448855;
+	color: #FFFFFF;
+	text-align: center;
+	padding: 20px;
 }
 
 .bottomLine {
@@ -69,7 +84,7 @@ ul {
 	margin-left: auto;
 	margin-right: auto;
 	padding: var(--content_padding);
-	max-width: 500px;
+	max-width: 550px;
 
 	/* color: black;
 	background: #DDDDDD;
@@ -82,12 +97,13 @@ ul {
 	align-content: flex-start;
 	justify-content: center;
 	column-gap: 100%;
+
 }
 
 .projectName {
-	font-size: 20pt;
 	font-weight: bold;
 	text-align: center;
+	font-size: 20pt;
 }
 .date {
 	font-weight: normal;
@@ -112,4 +128,20 @@ ul {
 	font-size: 14pt;
 	margin: 10px;
 	text-align: justify;
+}
+.levelCode {
+	padding-bottom: 10px;
+}
+.linkButton {
+	text-decoration: none;
+	padding: 5px 15px;
+	color: black;
+	background: #CCC;
+	border-radius: 10px;
+}
+a:hover.linkButton {
+	background-color: #DDD;
+}
+a:active.linkButton {
+	background-color: #AAA;
 }
