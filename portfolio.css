@@ -23,11 +23,8 @@ body {
 #header {
 	background-color: #448855;
 	width: 100%;
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    z-index: 120;
 	min-width: 330px;
+    position: fixed;
 }
 #fakeHeader {
 	background-color: #448855;
@@ -179,6 +176,8 @@ li {
 .levelCode {
 	font-weight: bold;
 	padding-bottom: 10px;
+	width: 100%;
+	text-align: center;
 }
 .linkButton {
 	font-weight: bold;
